@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrate Now!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffcccb, #ffb3b3, #ff9999);
+            text-align: center;
+            padding: 20px; /* Reduced padding for mobile */
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px; /* Reduced padding for mobile */
+            max-width: 90%; /* Set max-width to 90% for mobile devices */
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #ff1a1a;
+            font-size: 36px; /* Adjusted font size for mobile */
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px; /* Adjusted font size for mobile */
+            margin: 10px 0; /* Reduced margin for mobile */
+        }
+        .cake {
+            width: 80%; /* Responsive width for cake image */
+            max-width: 250px; /* Maximum width for cake image */
+            margin: 20px 0; /* Reduced margin for mobile */
+        }
+        .lights {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('content://com.android.providers.media.documents/document/image%3A1000554579'); /* Replace with your lights image */
+            background-size: cover;
+            opacity: 0.5; /* Adjust for desired brightness */
+            z-index: 0;
+        }
+        button {
+            background-color: #ff1a1a;
+            color: white;
+            border: none;
+            padding: 12px 24px; /* Reduced padding for mobile */
+            font-size: 16px; /* Adjusted font size for mobile */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            z-index: 1;
+            position: relative;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        .back-button {
+            background-color: #cccccc;
+            color: black;
+            margin-top: 10px;
+        }
+        .back-button:hover {
+            background-color: #aaaaaa;
+        }
+
+        /* Media Queries for additional responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px; /* Smaller font size for mobile */
+            }
+            p {
+                font-size: 16px; /* Smaller font size for mobile */
+            }
+            button {
+                padding: 10px 20px; /* Smaller button padding for mobile */
+                font-size: 14px; /* Smaller button font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lights"></div>
+
+    <div class="container">
+        <h1>Let's Celebrate, Deepuluu!</h1>
+        <img src="content://com.android.providers.media.documents/document/image%3A1000554579" alt="Cake" class="cake"> <!-- Replace with your cake image -->
+        <p>Happy Birthday! 🎉 It's time to cut the cake and celebrate your special day!</p>
+        <p>May this year bring you all the happiness and joy you deserve!</p>
+        <p>Thank you for being you, and for all the love you bring into my life!</p>
+        <p>Here's to making more beautiful memories together! 🥳</p>
+        
+        <button onclick="checkCake()">Check Cake</button>
+        <p id="cakeMessage" style="font-weight: bold; color: #ff1a1a;"></p>
+
+        <button class="back-button" onclick="window.location.href='admin.html'">Back</button> <!-- Back button linking to admin.html -->
+    </div>
+
+    <script>
+        function checkCake() {
+            document.getElementById("cakeMessage").innerText = "🎂 The cake is delicious! Can't wait to celebrate with you!";
+        }
+    </script>
+
+</body>
+</html>
